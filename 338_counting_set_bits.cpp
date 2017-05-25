@@ -1,3 +1,5 @@
+![](http://i.imgur.com/EgJctA1.jpg)
+
 class Solution {
 public:
     int helper(int num){
