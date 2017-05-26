@@ -14,6 +14,7 @@ Can you do it like a boss? Do it without using any builtin function like __built
 
 */
 
+// Brute Force Solution
 class Solution {
 public:
     int helper(int num){
@@ -30,6 +31,20 @@ public:
             int temp;
             temp = helper(i);
             solution.push_back(temp);
+        }
+        return solution;
+    }
+};
+
+
+// DP Solution
+class Solution {
+public:
+
+    vector<int> countBits(int num) {
+        vector<int> solution(num+1,0);
+        for(int i = 0;i <= num;i++){
+            solution[i] = solution[i>>1] + i%2;
         }
         return solution;
     }
